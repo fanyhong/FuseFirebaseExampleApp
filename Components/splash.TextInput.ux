@@ -1,0 +1,11 @@
+<TextInput ux:Class="splash.TextInput" FontSize="16" PlaceholderColor="#ccc" Padding="4" Margin="1">
+    <Rectangle Layer="Background" CornerRadius="3">
+        <Stroke Width="1" Color="#ccc" />
+        <SolidColor Color="White" />
+    </Rectangle>
+
+    <!--눌리는 동안 애니메이션 처리-->
+    <WhilePressed>
+        <Scale Factor=".98" Duration=".1" Easing="QuadraticOut" />
+    </WhilePressed>
+</TextInput>

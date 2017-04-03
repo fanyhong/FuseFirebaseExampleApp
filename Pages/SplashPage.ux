@@ -1,0 +1,32 @@
+<Page ux:Class="SplashPage">
+
+    <!-- MainView.ux 로 부터 주입 받은 router 란 이름의 Router 를 사용하기 위해 Router Dependency 로 지정 -->
+    <Router ux:Dependency="router" />
+
+    <JavaScript File="SplashPage.js" />
+
+    <DockPanel>
+
+        <Text Value="Fuse Firebase" FontSize="36" TextAlignment="Center" Dock="Top" Margin="50" />
+        
+        <StackPanel Width="92%" Dock="Top" Padding="20" Margin="0, 100, 0, 0">
+            <Grid ColumnCount="2" Columns="1*, 3*" Padding="5">
+                <Text Value="Email " Alignment="CenterRight" FontSize="16" TextColor="#2586EC"/>
+                <splash.TextInput Width="100%" Value="{userEmail}" ux:Name="userEmail" Alignment="Center" PlaceholderText="Email Address" />
+            </Grid>
+
+            <Grid ColumnCount="2" Columns="1*, 3*" Padding="5">
+                <Text Value="Password " Alignment="CenterRight"  FontSize="16"  TextColor="#2586EC" />
+                <splash.TextInput Width="100%" Value="{userPassword}" IsPassword="true" Alignment="Center" PlaceholderText="Password" />
+            </Grid>       
+            
+            <Text Value="{errorMessage}" Margin="10" Padding="10" FontSize="11" TextColor="#f44242" TextWrapping="Wrap" />
+
+            <splash.Button Text="Sign In With Email" Clicked="{signInWithEmail}" />
+            <splash.Button Text="Sign Up" Clicked="{signUp}" /> 
+        </StackPanel>
+
+        <Text Dock="Bottom" Margin="20" Opacity=".5" TextAlignment="Center" FontSize="12">by TripleHieut</Text>
+
+    </DockPanel>
+</Page>

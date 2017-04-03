@@ -1,0 +1,34 @@
+<Page ux:Class="SignupPage" Background="#ffdaa0">
+    <Router ux:Dependency="router" />
+    <JavaScript File="SignupPage.js" />
+
+    <DockPanel>
+        <Text Value="Sign Up" FontSize="36" TextAlignment="Center" Dock="Top" Margin="50" />
+        
+        <StackPanel Width="92%" Padding="20" Dock="Top" Margin="0, 50, 0, 0">
+            <Grid RowCount="2" Padding="3">
+                <Text Value="Email" Alignment="BottomLeft" FontSize="13" TextColor="#747475"/>
+                <splash.TextInput Width="90%" Height="120%" Value="{userEmail}" ux:Name="userEmail" Alignment="Right" PlaceholderText="Email Address" />
+            </Grid>
+
+            <Grid RowCount="2" Padding="3">
+                <Text Value="Password" Alignment="BottomLeft"  FontSize="13"  TextColor="#747475" />
+                <splash.TextInput Width="90%" Height="120%" Value="{userPassword}" IsPassword="true" Alignment="Right" PlaceholderText="Password" />
+            </Grid>     
+
+            <Grid RowCount="2" Padding="3">
+                <Text Value="Password Confirm" Alignment="BottomLeft"  FontSize="13"  TextColor="#747475" />
+                <splash.TextInput Width="90%" Height="120%" Value="{userConfirmPassword}" IsPassword="true" Alignment="Right" PlaceholderText="Password Confirm" />
+            </Grid>     
+
+            <Text Value="{errorMessage}" Margin="10" Padding="10" FontSize="11" TextColor="#f44242" TextWrapping="Wrap" />
+
+            <Grid ColumnCount="2">
+                <splash.Button Text="Sign Up" Clicked="{signUp}" />
+                <splash.Button Text="Cancel" Clicked="{cancel}" />
+            </Grid>
+        </StackPanel>
+ 
+        <Text Dock="Bottom" Margin="20" Opacity=".5" TextAlignment="Center" FontSize="12">by TripleHieut</Text>
+    </DockPanel>
+</Page>

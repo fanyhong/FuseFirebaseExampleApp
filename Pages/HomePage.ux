@@ -1,0 +1,56 @@
+<Page ux:Class="HomePage" Background="#dee3fc">
+    <Router ux:Dependency="router" />
+    <JavaScript File="HomePage.js" />
+
+    <DockPanel>
+        <Text FontSize="12" TextAlignment="Left" Dock="Top" Margin="10" Clicked="{signOut}">Sing Out</Text>
+
+        <Text FontSize="32" TextAlignment="Center" Margin="20" Dock="Top">HomePage</Text>
+        <Grid RowCount="2" Margin="20" Dock="Top">
+            <Text FontSize="14" TextAlignment="Left">Server Message : </Text>
+            <Text FontSize="16" TextAlignment="Center" Value="{serverMessage}" Background="#c3c6d8"/>
+        </Grid>
+
+        <Rectangle ux:Class="Seperator" Layer="Layout" Color="#777" Width="90%" Height="1" Dock="Top" /> 
+        <Seperator />
+
+        <StackPanel Margin="20" Dock="Top">
+            <Text FontSize="16" TextAlignment="Center">My Profile</Text>
+            <Grid ColumnCount="2" Columns="1*, 6*" Margin="20">
+                <Grid RowCount="2">
+                    <Text FontSize="12" TextAlignment="Right" Alignment="Right" Value="Email : " />
+                    <Text FontSize="12" TextAlignment="Right" Alignment="Right" Value="Name : " />
+                    <Text FontSize="12" TextAlignment="Right" Alignment="Right" Value="Introduction : " />
+                </Grid>
+                <Grid RowCount="2">
+                    <Text FontSize="12" TextAlignment="Left" Alignment="Left" Value="{userEmail}" />
+                    <splash.TextInput FontSize="12" TextAlignment="Left" PlaceholderText="Plz input your user-name here.." PlaceholderColor="#c9c5c3" Value="{userName}" ValueChanged="{setUserName}" Background="#fff" />
+                    <splash.TextInput FontSize="12" TextAlignment="Left" PlaceholderText="Plz tell me about your self.." PlaceholderColor="#c9c5c3" Value="{userIntroduction}" ValueChanged="{setUserIntroduction}" Background="#fff" />
+                </Grid>
+            </Grid>
+        </StackPanel>
+
+        <Seperator /> 
+        <Text Value="The List of All Users" TextAlignment="Center" Dock="Top" Margin="20"/>
+
+        <ScrollView>
+            <StackPanel>
+                <Grid ColumnCount="3">
+                    <Text FontSize="12" Color="#333" Value="email" TextAlignment="Center" Margin="5" />
+                    <Text FontSize="12" Color="#333" Value="username" TextAlignment="Center" Margin="5" />
+                    <Text FontSize="12" Color="#333" Value="introduction" TextAlignment="Center" Margin="5" />
+                </Grid>
+                <Seperator Height=".1" /> 
+                <Each Items="{allUsers}">
+                    <Grid ColumnCount="3">
+                        <Text FontSize="12" Color="#333" Value="{email}" TextAlignment="Center" Margin="5" />
+                        <Text FontSize="12" Color="#333" Value="{username}" TextAlignment="Center" Margin="5" />
+                        <Text FontSize="12" Color="#333" Value="{introduction}" TextAlignment="Center" Margin="5" />
+                    </Grid>
+                </Each>
+            </StackPanel>
+        </ScrollView>
+
+
+    </DockPanel> 
+</Page>

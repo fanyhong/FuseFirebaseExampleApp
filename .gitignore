@@ -1,0 +1,4 @@
+/build
+/.uno
+/node_modules
+firebase-config.js

@@ -1,0 +1,14 @@
+{
+  "name": "fusefirebaseapp",
+  "version": "1.0.0",
+  "description": "fuse + firebase example app",
+  "dependencies": {
+    "firebase": "^3.7.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
