@@ -14,11 +14,11 @@ Firebase Auth는 웹 방식(Javascript)을 사용하여 구현하였으며, 현�
 
 ### Demo 화면
 
-![Signin](./Capture-images/Signin.png)
+| Sign In                                | Sign Up                                | Main                               |
+| -------------------------------------- | -------------------------------------- | ---------------------------------- |
+| ![Signin](./Capture-images/Signin.png) | ![Signup](./Capture-images/Signup.png) | ![Main](./Capture-images/Main.png) |
 
-![Signup](./Capture-images/Signup.png)
 
-![Main](./Capture-images/Main.png)
 
 
 
@@ -74,7 +74,7 @@ module.exports = {
 
 7 전체 데이터 베이스 구조는 다음과 같습니다. users 항목은 SignUp시 랜덤 key 값으로 추가됩니다.
 
-![fairbase_database](/Users/hhh/Projects/fuse/MyProjects/FuseFirebaseApp/Capture-images/fairbase_database.png)
+![fairbase_database](./Capture-images/fairbase_database.png)
 
 
 
